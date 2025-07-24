@@ -13,30 +13,7 @@ const date = "202507";
 // Excel export configuration
 const EXCEL_OUTPUT_DIR = "./exports";
 
-// Comment out Google Sheets configuration
-// const SCOPES = [
-//   "https://www.googleapis.com/auth/spreadsheets",
-//   "https://www.googleapis.com/auth/drive",
-// ];
-// const FOLDER_ID = "0AG0ppMgwb2jyUk9PVA"; // Your Google Drive folder ID
 
-// Service account credentials
-// const file = path.resolve(process.cwd(), "google.service.json");
-// const credentials = JSON.parse(readFileSync(file, "utf8"));
-
-// const credentials = {
-// "type": "service_account",
-//   "project_id": "daily-operation-bot-465206",
-//   "private_key_id": "ca237567f269e7205eedc05d0f49a46d2954ed6f",
-//   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDwbQg1AvGevmV\nVmNB32H8Zf4WjrotueKnCHQdyqkP21ugqUdCLctlDCmkIchbIwOkVGw/rZxG21rB\nl5lpHyoKKhC8t+5/ZHAoiVY/XmnOHTwbKfRwEtbc6JMcjmmt9k9CuqzQD/eoZQs1\nKf0ejsRiRU2+2gAcAssUm9PfnSRYKNDvPZ6bZU1xg9y1Eu976gqck8JH9u5iKTQ1\n3w7RSQSifcKH79NK9Iwx1IVPxU6g3DSFEz+9cojE4XHfTRtIbGSX/zVwixtg9r1g\nTrQDKnQQtqHOVqI0zywce8QdFaR0ZCgOBvJKwfUxHZM/J9LOw65vlMGDzum+mvj4\nfMOSKFp7AgMBAAECggEAOUCsbZOG9CBgYbB37Dqonli4JSHOSvRcWUzsJRByPLyD\nwmvv9ueM3rtdbG8i+aC2fnfghwlANSsPkqJDkI64TWu7JG7JFsIp2Xk9W+BBorJD\nM5CkOKkR5V8yM35lYycwTExroZih7sLKsdxbdvX7cuBhGioJMSgR/C+NGpALoqqd\n76B6Lf7IaHwHREbFpmAPUce/nHD74qp7//JFE26lCTrQXZE4YUY1oPhagZF0jYlE\nGxM98R2IZ0zwsLg06EbWM2e5Y7AYBLa86nvo/2wPnLmBzQHJmFOnxhGFit7KYKdm\nS2WxQCYgDCmD5HPldS8wePJr0vif5jQzeVgt4BjkYQKBgQDz4QSoj31Iznc64M9e\npXMspZXGAaLsnzvCAgJnw81uALqrg9qjJcQoQG32htZ1FcPs0tbgjGq9o3NZj/FK\nJ4LOKUbRDBEqtWg0peOA7I5Fv9YnNf8y4X9h34/pZ+ckz/gXEZ0D+T3XbgWSLMw1\nlYC5pE/tAcKfD1fmepRdaL5qIQKBgQDNfGdLo2/IVM3t6D5wJamJcaHUtj40o45g\nVVCg6bS4B7QLDPTmmdGOznR9AlnIUirldyT99lFsrfoJ498VhkmXJoaXMWdHc/Pb\ncfwxIJKk8j3j1vdkFAVt8FIvoggM2vo6SQfDRjtiRH3xU1Lwz43SI+TFQ31OBOtC\n34SFOVgJGwKBgQCIv4fpLGxHwt3AOgaNP6CRTFfrK0e7/p13b8EBhh1OrUH+onSa\nPrb7CwWd0oW2KXou9Rpf1tyTcW9grQHTXsxN5X88ANQvaoD/5HTo+bvdCHCAlBqA\n4UiYDM+ZRRWq4qJt7QZqD/vJLHwbNttawHXpomTetLn4jpXvOpSuu+jpgQKBgA5J\nwTD8O1CVvP/27yiDJee9tAADcA3e9Y5zQDkAJyXIu1ctXnYOagjhCC6NFEsek4cD\nItpZ302MR1+ara9keAd/kUpAECtiv6kZouyTlD7N7UnDb85QqhP76usO/DpQm6ej\n3ltQrd5mXs+B+Llv5S+geU7SI4tiQi2TNzbARwPTAoGBAIpcfqe3H6qOumsRWCUf\ngyW0eiEgM7vVIR+5Aw/kKkK1JpgJyD6upOKSFjRlW6+BvAUZry99lrKtrcLkFBMR\npiZ4W0jdbYZmemBXFkI/la/j7xZ/VGjSrLd+xu7w43iRXMjwz1bh0SiH+c4UBer5\nzmvGEArrjFvrIgzcNkrFqZci\n-----END PRIVATE KEY-----\n",
-//   "client_email": "bot-947@daily-operation-bot-465206.iam.gserviceaccount.com",
-//   "client_id": "105808103813995687944",
-//   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-//   "token_uri": "https://oauth2.googleapis.com/token",
-//   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-//   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bot-947%40daily-operation-bot-465206.iam.gserviceaccount.com",
-//   "universe_domain": "googleapis.com"
-// };
 
 async function createExcelFile(data: any[], adStats: any[] = []) {
   try {
